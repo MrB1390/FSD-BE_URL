@@ -81,7 +81,7 @@ export const userLogin = async(req,res) =>{
           httpOnly: true,
           secure: true,
           expiresIn: new Date(Date.now() + (60*60*1000)),
-          sameSite: 'strict',
+          // sameSite: 'strict',
         });
         res.status(200).json({
             message: "Login Successfully",
