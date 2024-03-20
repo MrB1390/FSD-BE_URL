@@ -80,7 +80,7 @@ export const userLogin = async(req,res) =>{
         res.cookie('token',token,{
           httpOnly: true,
           expiresIn: new Date(Date.now() + (60*60*1000)),
-          sameSite: 'strict',
+          sameSite: 'none',
           secure: 'true'
         });
         res.status(200).json({
