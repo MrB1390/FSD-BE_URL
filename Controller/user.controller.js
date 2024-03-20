@@ -81,7 +81,8 @@ export const userLogin = async(req,res) =>{
           httpOnly: true,
           secure: true,
           expiresIn: new Date(Date.now() + (60*60*1000)),
-          sameSite: 'strict'
+          sameSite: 'strict',
+          domain: 'https://prismatic-cassata-773ca5.netlify.app'
         });
         res.status(200).json({
             message: "Login Successfully",
