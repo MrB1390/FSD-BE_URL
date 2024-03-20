@@ -9,7 +9,7 @@ import cookieParser from 'cookie-parser';
 
 dotenv.config();
 
-const allowedOrigin = ['http://localhost:5173']
+const allowedOrigin = ['https://prismatic-cassata-773ca5.netlify.app']
 
 const app = express();
 app.use(cors({ credentials: true, origin: allowedOrigin }));
