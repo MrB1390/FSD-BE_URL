@@ -79,10 +79,8 @@ export const userLogin = async(req,res) =>{
         const token = jwt.sign({_id:user._id},process.env.SECRET_KEY);
         res.cookie('token',token,{
           httpOnly: true,
-          secure: true,
           expiresIn: new Date(Date.now() + (60*60*1000)),
           sameSite: 'strict',
-          domain: 'prismatic-cassata-773ca5.netlify.app'
         });
         res.status(200).json({
             message: "Login Successfully",
